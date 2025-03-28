@@ -13,6 +13,14 @@
 #define BOTH  3
 
 / {
+        conditional_layers {
+                compatible = "zmk,conditional-layers";
+                tri_layer {
+                        if-layers = <UPPER LOWER>;
+                        then-layer = <BOTH>;
+                };
+        };
+
         keymap {
                 compatible = "zmk,keymap";
 
@@ -27,7 +35,7 @@
    &kp TAB   &kp Q &kp W    &kp E     &kp R        &kp T   &kp Y     &kp U    &kp I     &kp O   &kp P    &kp BSPC
    &kp LCTRL &kp A &kp S    &kp D     &kp F        &kp G   &kp H     &kp J    &kp K     &kp L   &kp SEMI &kp SQT
    &kp LSHFT &kp Z &kp X    &kp C     &kp V        &kp B   &kp N     &kp M    &kp COMMA &kp DOT &kp FSLH &kp ESC
-                   &kp LGUI &mo LOWER &kp SPACE    &kp RET &mo UPPER &kp RALT
+                   &kp LGUI &mo UPPER &kp SPACE    &kp RET &mo LOWER &kp RALT
                         >;
                 };
 
@@ -42,7 +50,7 @@
    &kp ESC    &kp N1     &kp N2   &kp N3   &kp N4   &kp N5          &kp N6    &kp N7    &kp N8   &kp N9    &kp N0   &kp BSPC
    &kp LCTRL  &kp PG_UP  &none    &none    &none    &none           &kp K_APP &kp HOME  &kp UP   &kp END   &kp SEMI &kp DEL
    &kp LSHFT  &kp PG_DN  &none    &none    &none    &none           &none     &kp LEFT  &kp DOWN &kp RIGHT &kp FSLH &kp PSCRN
-                                  &kp LGUI &trans   &kp SPACE       &kp RET   &mo BOTH     &kp RALT
+                                  &kp LGUI &trans   &kp SPACE       &kp RET   &trans    &kp RALT
                         >;
                 };
 
@@ -57,7 +65,7 @@
    &kp ESC   &kp EXCL &kp AT   &kp HASH  &kp DLLR   &kp PRCNT       &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &kp BSPC
    &kp LCTRL &kp PIPE &kp LBRC &kp LBKT  &kp PLUS   &kp UNDER       &kp MINUS &kp EQUAL &kp RBKT  &kp RBRC &kp BSLH &kp GRAVE
    &kp LSHFT &none    &none    &kp GRAVE &kp LPAR   &none           &none     &kp RPAR  &kp TILDE &none    &none    &kp RSHFT
-                               &kp LGUI  &mo BOTH   &kp SPACE       &kp RET   &trans    &kp RALT
+                               &kp LGUI  &trans     &kp SPACE       &kp RET   &trans    &kp RALT
                         >;
                 };
 

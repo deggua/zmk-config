@@ -24,7 +24,7 @@
         combos {
                 compatible = "zmk,combos";
                 combo_move_window_up {
-                        timeout-ms = <-1>;
+                        timeout-ms = < -1 >;
                         slow-release = <1>;
                         key-positions = <15 37>;
                         layers = <UPPER>;

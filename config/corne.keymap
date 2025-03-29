@@ -25,28 +25,24 @@
                 compatible = "zmk,combos";
                 combo_move_window_up {
                         timeout-ms = <3600000>;
-                        slow-release;
                         key-positions = <15 37>;
                         layers = <UPPER>;
                         bindings = <&kp LG(UP)>;
                 };
                 combo_move_window_left {
                         timeout-ms = <3600000>;
-                        slow-release;
                         key-positions = <26 37>;
                         layers = <UPPER>;
                         bindings = <&kp LG(LEFT)>;
                 };
                 combo_move_window_down {
                         timeout-ms = <3600000>;
-                        slow-release;
                         key-positions = <27 37>;
                         layers = <UPPER>;
                         bindings = <&kp LG(DOWN)>;
                 };
                 combo_move_window_right {
                         timeout-ms = <3600000>;
-                        slow-release;
                         key-positions = <28 37>;
                         layers = <UPPER>;
                         bindings = <&kp LG(RIGHT)>;

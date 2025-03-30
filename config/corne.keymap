@@ -90,7 +90,7 @@
                                  , <&macro_release &kp LGUI>
                                  , <&macro_tap &kp F24>
                                  ;
-                }
+                };
         };
 
         combos {

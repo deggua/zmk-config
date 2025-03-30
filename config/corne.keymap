@@ -16,30 +16,46 @@
                         then-layer = <BOTH>;
                 };
         };
-
+// up:15 left:26 down:27 right:28
         behaviors {
+                kt_on: kt_on {
+                        compatible = "zmk,behavior-key-toggle";
+                        #binding-cells = <1>;
+                        toggle-mode = "on";
+                };
+
+                kt_off: kt_off {
+                        compatible = "zmk,behavior-key-toggle";
+                        #binding-cells = <1>;
+                        toggle-mode = "off";
+                };
+
                 t_mwnd_up: t_mwnd_up {
                         compatible = "zmk,behavior-tri-state";
                         #binding-cells = <0>;
-                        bindings = <&kt LGUI>, <&kp UP>, <&kt LGUI>;
+                        bindings = <&kt_on LGUI>, <&kp UP>, <&kt_off LGUI>;
+                        ignored-key-positions = <26 27 28>;
                 };
 
                 t_mwnd_left: t_mwnd_left {
                         compatible = "zmk,behavior-tri-state";
                         #binding-cells = <0>;
-                        bindings = <&kt LGUI>, <&kp LEFT>, <&kt LGUI>;
+                        bindings = <&kt_on LGUI>, <&kp LEFT>, <&kt_off LGUI>;
+                        ignored-key-positions = <15 27 28>;
                 };
 
                 t_mwnd_down: t_mwnd_down {
                         compatible = "zmk,behavior-tri-state";
                         #binding-cells = <0>;
-                        bindings = <&kt LGUI>, <&kp DOWN>, <&kt LGUI>;
+                        bindings = <&kt_on LGUI>, <&kp DOWN>, <&kt_off LGUI>;
+                        ignored-key-positions = <15 26 28>;
                 };
 
                 t_mwnd_right: t_mwnd_right {
                         compatible = "zmk,behavior-tri-state";
                         #binding-cells = <0>;
-                        bindings = <&kt LGUI>, <&kp RIGHT>, <&kt LGUI>;
+                        bindings = <&kt_on LGUI>, <&kp RIGHT>, <&kt_off LGUI>;
+                        ignored-key-positions = <15 26 27>;
                 };
         };
 

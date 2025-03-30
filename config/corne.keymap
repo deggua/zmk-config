@@ -25,6 +25,7 @@
                 };
         };
 
+
         macros {
                 m_upper: m_upper {
                         compatible = "zmk,behavior-macro";

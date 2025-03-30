@@ -58,6 +58,12 @@
                         bindings = <&kt_on LGUI>, <&kp RIGHT>, <&kt_off LGUI>;
                         ignored-key-positions = <15 26 27>;
                 };
+
+                t_alt_tab: t_alt_tab {
+                        compatible = "zmk,behavior-tri-state";
+                        #binding-cells = <0>;
+                        bindings = <&kt_on LALT>, <&kp TAB>, <&kt_off LALT>;
+                };
         };
 
         macros {
@@ -78,8 +84,8 @@
                 compatible = "zmk,combos";
                 combo_alt_tab  {
                         timeout-ms = <3600000>;
-                        key-positions = <0 36>;
-                        bindings = <&kp LA(TAB)>;
+                        key-positions = <0 36>; // LGUI+TAB
+                        bindings = <&t_alt_tab>;
                         layers = <DEFAULT>;
                 };
         };

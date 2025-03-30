@@ -63,7 +63,8 @@
                         compatible = "zmk,behavior-tri-state";
                         #binding-cells = <0>;
                         bindings = <&kt_on LALT>, <&kp TAB>, <&kt_off LALT>;
-                        ignored-key-positions = <0 24 36>; // ignore TAB, SHIFT, LGUI
+                        // ignored-key-positions = <0 24 36>; // ignore TAB, SHIFT, LGUI
+                        ignored-key-positions = <0 24>; // ignore TAB, SHIFT
                 };
         };
 

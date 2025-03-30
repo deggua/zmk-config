@@ -35,35 +35,35 @@
                         compatible = "zmk,behavior-tri-state";
                         #binding-cells = <0>;
                         bindings = <&kt_on LGUI>, <&kp UP>, <&kt_off LGUI>;
-                        ignored-key-positions = <26 27 28>;
+                        ignored-key-positions = <26 27 28>; // ignore other MWND keys
                 };
 
                 t_mwnd_left: t_mwnd_left {
                         compatible = "zmk,behavior-tri-state";
                         #binding-cells = <0>;
                         bindings = <&kt_on LGUI>, <&kp LEFT>, <&kt_off LGUI>;
-                        ignored-key-positions = <15 27 28>;
+                        ignored-key-positions = <15 27 28>; // ignore other MWND keys
                 };
 
                 t_mwnd_down: t_mwnd_down {
                         compatible = "zmk,behavior-tri-state";
                         #binding-cells = <0>;
                         bindings = <&kt_on LGUI>, <&kp DOWN>, <&kt_off LGUI>;
-                        ignored-key-positions = <15 26 28>;
+                        ignored-key-positions = <15 26 28>; // ignore other MWND keys
                 };
 
                 t_mwnd_right: t_mwnd_right {
                         compatible = "zmk,behavior-tri-state";
                         #binding-cells = <0>;
                         bindings = <&kt_on LGUI>, <&kp RIGHT>, <&kt_off LGUI>;
-                        ignored-key-positions = <15 26 27>;
+                        ignored-key-positions = <15 26 27>; // ignore other MWND keys
                 };
 
                 t_alt_tab: t_alt_tab {
                         compatible = "zmk,behavior-tri-state";
                         #binding-cells = <0>;
                         bindings = <&kt_on LALT>, <&kp TAB>, <&kt_off LALT>;
-                        ignored-key-positions = <0 36>;
+                        ignored-key-positions = <0 24 36>; // ignore TAB, SHIFT, LGUI
                 };
         };
 
